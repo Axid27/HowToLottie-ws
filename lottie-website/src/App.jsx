@@ -19,11 +19,11 @@ function App() {
           </nav>
       </header>
 
-      {/* <HeaderSection />
+      <HeaderSection />
       <InputSection />
       <CursorSection />
-      <ScrollSection />  */}
-      <Presentation />
+      <ScrollSection /> 
+      {/* <Presentation /> */}
     </div>
   );
 }
