@@ -1,13 +1,16 @@
 import React, { useRef } from "react";
-import "@lottiefiles/lottie-player";
+import Lottie from "lottie-react";
 import "./section.css";
+// Importiere die Lottie-Animation
+
 
 const InputSection = () => {
-  const playerRef = useRef();
+  // Ref für die Lottie-Animation
+  // Damit können wir die Animation steuern (z.B. abspielen, pausieren)
 
-  const handleClick = () => {
-    playerRef.current?.play();
-  };
+
+  // Funktion, die aufgerufen wird, wenn der Button geklickt wird
+
 
   const bgStyle = {
     backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)),
@@ -23,17 +26,12 @@ const InputSection = () => {
         <div className="security-container"> 
           <div className="input-content">   
             <input type="text" placeholder="Gib dein Password ein:" />
-            <button onClick={handleClick}>Verschlüsseln</button>
+            <button onClick={"handleClick"}>Verschlüsseln</button>
           </div>
-          <lottie-player
-            ref={playerRef}
-            src="/animations/SecurityLock.json"
-            background="transparent"
-            speed="1"
-            loop={false}
-            autoplay={false}
-            style={{ width: "50%", height: "50%" }}
-          ></lottie-player>
+          <div className="lottie-wrapper">
+            {/* Hier wird die Lottie-Animation eingebunden */}
+            
+          </div>
         </div>   
       </div>  
     </section>

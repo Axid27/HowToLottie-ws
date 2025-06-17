@@ -4,8 +4,7 @@ import InputSection from "./components/InputSection";
 import CursorSection from "./components/CursorSection";
 import ScrollSection from "./components/ScrollSection";
 import "./App.css";
-import LottiePraxisSlide from "./slides/LottiePraxisSlide";
-import Presentation from "./slides/Presentation";
+
 
 function App() {
   return (
@@ -23,7 +22,7 @@ function App() {
       <InputSection />
       <CursorSection />
       <ScrollSection /> 
-      {/* <Presentation /> */}
+
     </div>
   );
 }

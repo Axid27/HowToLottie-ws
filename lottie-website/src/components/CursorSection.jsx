@@ -3,18 +3,20 @@ import lottie from "lottie-web";
 import "./section.css";
 
 export default function CursorSection() {
+
+  // Ref für das Container-Element, in dem die Lottie-Animation gerendert wird
   const containerRef = useRef(null);
+
+  // Ref für die Lottie-Animation, um sie später zu steuern
   const animRef = useRef(null);
 
+  // Ref für die Lottie-Animation
   useEffect(() => {
-    animRef.current = lottie.loadAnimation({
-      container: containerRef.current,
-      renderer: "svg",
-      loop: false,
-      autoplay: false,
-      path: "/animations/SecurityLock.json", // Path to your Lottie JSON file
+    // Animation initialisieren, wenn das Component gemountet wird
+   
     });
 
+    // handleMouseMove function zum Updaten der Animation basierend auf der Mausposition
     const handleMouseMove = (e) => {
       const bounds = containerRef.current.getBoundingClientRect();
       const xPos = (e.clientX - bounds.left) / bounds.width;
@@ -22,24 +24,24 @@ export default function CursorSection() {
       animRef.current.goToAndStop(frame, true);
     };
 
-    containerRef.current?.addEventListener("mousemove", handleMouseMove);
+    // Füge den Mousemove-Event-Listener zum Container hinzu
+    
 
-    return () => {
-      animRef.current.destroy();
-      containerRef.current?.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+   
+
 
   return (
     <section className="section cursor-section">
       <h2>Steuere mit deinem Cursor</h2>
       <div
-        ref={containerRef}
+        // Das Container-Element, in dem die Lottie-Animation gerendert wird
+        
         style={{
           width: 400,
           height: 400,
-          border: "1px solid #ccc",
           cursor: "pointer",
+          border: "2px solid #ccc",
+          borderRadius: "8px",
         }}
       ></div>
     </section>
