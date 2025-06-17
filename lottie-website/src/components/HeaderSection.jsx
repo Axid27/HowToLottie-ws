@@ -2,7 +2,7 @@
 import Lottie from "lottie-react";
 import "./section.css"; 
 // Importiere die Lottie-Animation
-import animationData from "../animations/LandingPageHeader.json";
+
 
 const HeaderSection = () => {
  
@@ -15,11 +15,7 @@ const HeaderSection = () => {
       </div>
       <div style={{ width: "50%", height: "50%", margin: "0px 0px 350px 0px" }}>
         {/* Hier wird die Lottie-Animation eingebunden */}
-        <Lottie 
-          animationData={animationData} 
-          loop={true} 
-          autoplay={true} 
-        />
+        
       </div>
     </section>
   );
